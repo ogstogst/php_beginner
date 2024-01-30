@@ -1,4 +1,5 @@
 # 変更したら、docker-compose down -> docker-compose up で変更を反映させる
+# 自由に設定できるポート番号は、49152から65535
 version: '3'
 services:
   web:
@@ -13,7 +14,7 @@ services:
               echo 'display_errors = On' >> /usr/local/etc/php/php.ini &&
               apache2-foreground"
     ports:
-      - 8080:80
+      - 49152:80
     depends_on:
       - db
   db:
@@ -33,7 +34,7 @@ services:
       - PMA_USER=user
       - PMA_PASSWORD=password
     ports:
-      - 4040:80
+      - 49153:80
     volumes:
       - ./phpmyadmin/sessions:/sessions
 volumes:
