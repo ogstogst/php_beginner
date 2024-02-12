@@ -10,11 +10,19 @@
     - [3.2.4. CGI](#324-cgi)
   - [3.3. MEMO](#33-memo)
 - [4. テキストと数の操作](#4-テキストと数の操作)
-  - [MEMO](#memo)
-  - [用語](#用語)
-    - [変数](#変数)
-    - [単一引用符・二重引用符](#単一引用符二重引用符)
-    - [特殊文字](#特殊文字)
+  - [4.1. MEMO](#41-memo)
+  - [4.2. 用語](#42-用語)
+    - [4.2.1. 変数](#421-変数)
+    - [4.2.2. 単一引用符・二重引用符](#422-単一引用符二重引用符)
+    - [4.2.3. 特殊文字](#423-特殊文字)
+    - [4.2.4. フォーマット規則](#424-フォーマット規則)
+  - [4.3. 関数](#43-関数)
+    - [4.3.1. printf()](#431-printf)
+    - [4.3.2. strlen()](#432-strlen)
+    - [4.3.3. substr()](#433-substr)
+    - [4.3.4. str\_replace()](#434-str_replace)
+    - [4.3.5. trim()](#435-trim)
+    - [4.3.6. ucwords()](#436-ucwords)
 - [](#)
 - [](#-1)
 
@@ -82,7 +90,7 @@ CGI（Common Gateway Interface）規格をサポートするWebサーバーと�
 
 # 4. テキストと数の操作
 
-## MEMO
+## 4.1. MEMO
 1. C
 2. D
 3. D
@@ -95,12 +103,12 @@ CGI（Common Gateway Interface）規格をサポートするWebサーバーと�
 10. A
 11. C
 
-## 用語
-### 変数
+## 4.2. 用語
+### 4.2.1. 変数
 変数とは、プラグラムが動作する際に使用する値を保存する箱のようなもの。
 変数を管理するためにつける名前を、'変数名'と呼び、変数名の前には「$」をつける。
 
-### 単一引用符・二重引用符
+### 4.2.2. 単一引用符・二重引用符
 単一引用符 === シングルクォート
 単一引用符で囲まれた文字列内では、変数は展開されず、エスケープシーケンス（例えば\nや\t。特殊文字とも呼ぶ）も解釈されない。
 単一引用符で囲まれた変数名は変数が値に置き換えられた文字列とはならない。
@@ -110,7 +118,7 @@ CGI（Common Gateway Interface）規格をサポートするWebサーバーと�
 これにより、動的な文字列を降り簡単に生成することができる。
 [エスケープシーケンス](/php_text-and-number/quote.php)
 
-### 特殊文字
+### 4.2.3. 特殊文字
 1. \n : 改行（LF、Line Feed）を表します。
 2. \r : キャリッジリターン（CR、Carriage Return）を表します。
 3. \t : タブを表します。
@@ -121,6 +129,62 @@ CGI（Common Gateway Interface）規格をサポートするWebサーバーと�
 8. \x[0-9A-Fa-f]{1,2} : 16進数で指定された文字を表します。例えば、\x41は「A」を表します。
 9. \u{[0-9A-Fa-f]+} : Unicode文字を表します。例えば、\u{41}は「A」を表します。
 10. \0 : NULL文字を表します。
+
+### 4.2.4. フォーマット規則
+
+## 4.3. 関数
+### 4.3.1. printf()
+[official](https://www.php.net/manual/ja/function.printf.php)
+[ex](/php_text-and-number/printf.php)
+printf()関数は、フォーマットされた文字列を出力する。フォーマットを指定することで、形式をそろえた文字列を出力することができる。
+printf(フォーマット, フォーマット中に変換する値)
+
+### 4.3.2. strlen()
+[official](https://www.php.net/manual/ja/function.strlen.php)
+[ex](/php_text-and-number/strlen.php)
+与えられたstringの長さを返す。
+strlen()が返すのはバイト数であり、文字数ではない。
+
+### 4.3.3. substr()
+[official](https://www.php.net/manual/ja/function.substr.php)
+[ex](/php_text-and-number/substr.php)
+文字列の一部分を取り出す。
+```php
+substr(string $string, int $offset, ?int $length = null): string
+```
+
+### 4.3.4. str_replace()
+[official](https://www.php.net/manual/ja/function.str-replace.php)
+[ex](/php_text-and-number/str_replace.php)
+一部の文字列を置換する。
+```php
+str_replace(
+    array|string $search,
+    array|string $replace,
+    string|array $subject,
+    int &$count = null
+): string|array
+// この関数は、subject の中の search を全て replace に置換します。
+// この関数は、置換後の文字列あるいは配列を返します。
+```
+
+### 4.3.5. trim()
+[official](https://www.php.net/manual/ja/function.trim.php)
+[ex](/php_text-and-number/trim.php)
+文字列の先頭および末尾にあるホワイトスペースを取り除く
+```php
+trim(string $string, string $characters = " \n\r\t\v\x00"): string
+```
+2番目のパラメーターを指定しない場合、trim()は以下の文字を削除する。
+- " " (ASCII 32 (0x20)): 通常の空白。
+- "\t" (ASCII 9 (0x09)): タブ。
+- "\n" (ASCII 10 (0x0A)): リターン。
+- "\r" (ASCII 13 (0x0D)): 改行。
+- "\0" (ASCII 0 (0x00)): NULバイト。
+- "\v" (ASCII 11 (0x0B)): 垂直タブ。
+
+### 4.3.6. ucwords()
+
 
 #
 
