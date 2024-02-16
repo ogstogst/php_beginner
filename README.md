@@ -16,6 +16,7 @@
     - [4.2.2. 単一引用符・二重引用符](#422-単一引用符二重引用符)
     - [4.2.3. 特殊文字](#423-特殊文字)
     - [4.2.4. フォーマット規則](#424-フォーマット規則)
+    - [4.2.5. 文字列結合演算子](#425-文字列結合演算子)
   - [4.3. 関数](#43-関数)
     - [4.3.1. printf()](#431-printf)
     - [4.3.2. strlen()](#432-strlen)
@@ -23,6 +24,7 @@
     - [4.3.4. str\_replace()](#434-str_replace)
     - [4.3.5. trim()](#435-trim)
     - [4.3.6. ucwords()](#436-ucwords)
+    - [4.3.7. strtolower()](#437-strtolower)
 - [](#)
 - [](#-1)
 
@@ -132,6 +134,9 @@ CGI（Common Gateway Interface）規格をサポートするWebサーバーと�
 
 ### 4.2.4. フォーマット規則
 
+### 4.2.5. 文字列結合演算子
+[official](https://www.php.net/manual/ja/language.operators.string.php)
+
 ## 4.3. 関数
 ### 4.3.1. printf()
 [official](https://www.php.net/manual/ja/function.printf.php)
@@ -184,7 +189,13 @@ trim(string $string, string $characters = " \n\r\t\v\x00"): string
 - "\v" (ASCII 11 (0x0B)): 垂直タブ。
 
 ### 4.3.6. ucwords()
+[official](https://www.php.net/manual/ja/function.ucwords.php)
+[ex](/php_text-and-number/ucwords.php)
 
+### 4.3.7. strtolower()
+[official](https://www.php.net/manual/ja/function.strtolower.php)
+[ex](/php_text-and-number/strtolower.php)
+- strtoupper()もある。すべて大文字にするらしい。
 
 #
 
