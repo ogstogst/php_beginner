@@ -76,7 +76,7 @@
 9. A
 10. C
 
-## 用語
+## 4.2. 用語
 ### 真偽値
 [official](https://www.php.net/manual/ja/language.types.boolean.php)
 [ex](/php_conditionals-and-loops.php)
@@ -108,7 +108,24 @@
 [ex](/php_conditionals-and-loops/for.php)
 
 
-#
+# 5. データのグループ : 配列の操作 [array]
+## memo
+1. D
+2. E
+3. D
+4. A
+5. A
+6. D
+7. B
+8. D
+9. D
+10. E
+
+### 用語
+#### 配列
+[official](https://www.php.net/manual/ja/language.types.array.php)
+[ex](http://localhost:49152/array/array.php)
+
 
 1. [1. url](#1-url)
 2. [2. PHPの概要](#2-phpの概要)
@@ -118,5 +135,6 @@
    3. [3.3. 関数](#33-関数)
 4. [4. ロジック : 判定と繰り返し \[Conditionals-and-Loops\]](#4-ロジック--判定と繰り返し-conditionals-and-loops)
    1. [4.1. MEMO](#41-memo)
-   2. [用語](#用語)
-5. [](#)
+   2. [4.2. 用語](#42-用語)
+5. [5. データのグループ : 配列の操作 \[array\]](#5-データのグループ--配列の操作-array)
+   1. [memo](#memo)
