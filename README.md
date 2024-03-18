@@ -109,32 +109,33 @@
 
 
 # 5. データのグループ : 配列の操作 [array]
-## memo
+[official](https://www.php.net/manual/ja/language.types.array.php)
+[ex](http://localhost:49152/array/array.php)
+## 5.1. memo
 1. D
-2. E
-3. D
+1. E
+2. D
+3. A
 4. A
-5. A
-6. D
-7. B
+5. D
+6. B
 8. D
 9. D
 10. E
 
-### 用語
-#### 配列
-[official](https://www.php.net/manual/ja/language.types.array.php)
-[ex](http://localhost:49152/array/array.php)
+# 6. ロジックのグループ:関数とファイル
+[ex](http://localhost:49152/function/function.php)
+## memo
+1. D
+2. A
+3. C
+4. C, D
+5. A
+6. A
+7. C
+8. E
+9. B
+10. D
 
-
-1. [1. url](#1-url)
-2. [2. PHPの概要](#2-phpの概要)
-3. [3. テキストと数の操作](#3-テキストと数の操作)
-   1. [3.1. MEMO](#31-memo)
-   2. [3.2. 用語](#32-用語)
-   3. [3.3. 関数](#33-関数)
-4. [4. ロジック : 判定と繰り返し \[Conditionals-and-Loops\]](#4-ロジック--判定と繰り返し-conditionals-and-loops)
-   1. [4.1. MEMO](#41-memo)
-   2. [4.2. 用語](#42-用語)
-5. [5. データのグループ : 配列の操作 \[array\]](#5-データのグループ--配列の操作-array)
-   1. [memo](#memo)
+# データとロジックの結合:オブジェクトの操作
+[ex](http://localhost:49152/object/object.php)

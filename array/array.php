@@ -1,5 +1,4 @@
-<?php
-// array() 構文
+<?php // array() 構文
 // $array1 = array(
 //   "foo" => "bar",
 //   "bar" => "foo",
@@ -24,8 +23,7 @@
 // echo "</pre>";
 ?>
 
-<?php
-// 連想配列
+<?php // 連想配列
 // $array3 = array(
 //   1    => "a",
 //   "1"  => "b",
@@ -53,8 +51,7 @@
 // echo "</pre>";
 ?>
 
-<?php
-// 関数 returnに配列
+<?php // 関数 returnに配列
 // function getArray()
 // {
 //   return array(1, 2, 3);
@@ -75,8 +72,7 @@
 
 ?>
 
-<?php
-// 並び順
+<?php // 並び順
 // $colors[0] = 'red';
 // $colors[1] = 'yellow';
 // $colors[3] = 'orange';
@@ -190,41 +186,153 @@
 
 ?>
 
-<?php
-// 配列を操作する主な関数
+<?php // 配列を操作する主な関数
 // 配列関数 https://www.php.net/manual/ja/ref.array.php
-// count()
+# count()
 // https://www.php.net/manual/ja/function.count.php
-// $a[0] = 1;
-// $a[1] = 3;
-// $a[2] = 5;
-// var_dump(count($a));
+$a[0] = 1;
+$a[1] = 3;
+$a[2] = 5;
+var_dump(count($a));
 
-// $b[0]  = 7;
-// $b[5]  = 9;
-// $b[10] = 11;
-// var_dump(count($b));
+$b[0]  = 7;
+$b[5]  = 9;
+$b[10] = 11;
+var_dump(count($b));
 
-// explode()
+# explode()
 // https://www.php.net/manual/ja/function.explode.php
-$pizza  = "piece1 piece2 piece3 piece4 piece5 piece6";
-$pieces = explode(" ", $pizza);
-echo "<pre>";
-print_r($pieces);
-echo "</pre>";
-echo "<pre>";
-print $pieces[0];
-echo "</pre>";
-echo "<pre>";
-print $pieces[1];
-echo "</pre>";
+// $pizza  = "piece1 piece2 piece3 piece4 piece5 piece6";
+// $pieces = explode(" ", $pizza);
+// echo "<pre>";
+// print_r($pieces);
+// echo "</pre>";
+// echo "<pre>";
+// print $pieces[0];
+// echo "</pre>";
+// echo "<pre>";
+// print $pieces[1];
+// echo "</pre>";
 
-// 例 2
-$data = "foo:*:1023:1000::/home/foo:/bin/sh";
-list($user, $pass, $uid, $gid, $gecos, $home, $shell) = explode(":", $data);
-echo $user; // foo
-echo "<br>";
-echo $pass; // *
-echo "<br>";
-echo $shell; // /bin/sh
-?>
+// $data = "foo:*:1023:1000::/home/foo:/bin/sh";
+// list($user, $pass, $uid, $gid, $gecos, $home, $shell) = explode(":", $data);
+// echo $user; // foo
+// echo "<br>";
+// echo $pass; // *
+// echo "<br>";
+// echo $shell; // /bin/sh
+
+# implode()
+// https: //www.php.net/manual/ja/function.implode.php
+// $array = ['lastname', 'email', 'phone'];
+// var_dump(implode(",", $array));
+// // 空の配列を使うと空文字列となります
+// var_dump(implode('hello', []));
+// // separator はオプションです。
+// var_dump(implode(['a', 'b', 'c']));
+
+# unset()
+// https://www.php.net/manual/ja/function.unset.php
+// function destroy_foo()
+// {
+//   global $foo;
+//   unset($foo);
+// }
+// $foo = 'bar';
+// destroy_foo();
+// echo $foo;
+
+# in_array()
+// https://www.php.net/manual/ja/function.in-array.php
+// $fruits = ['apple', 'banana', 'orange'];
+// if (in_array('banana', $fruits)) {
+//   echo "<pre>";
+//   print 'バナナがありますと';
+//   echo "</pre>";
+// } else {
+//   echo 'バナナはないですと';
+// }
+
+// $numbers = [1, 2, 3];
+// if (in_array('1', $numbers, true)) {
+//   echo '1が見つかりました！';
+// } else {
+//   echo '1は見つかりませんでした！';
+// }
+
+# array_key_exists()
+// https://www.php.net/manual/ja/function.array-key-exists.php
+// $search_array = array('first' => 1, 'second' => 4);
+// if (array_key_exists('first', $search_array)) {
+//   echo "<pre>";
+//   print("この配列には 'first' という要素が存在します");
+//   echo "</pre>";
+// }
+
+# array_search()
+// https://www.php.net/manual/ja/function.array-search.php
+// $array = array(
+//   0 => 'blue',
+//   1 => 'red',
+//   2 => 'green',
+//   3 => 'red',
+// );
+
+// $key_1 = array_search('green', $array);
+// $key_2 = array_search('red', $array);
+
+// echo "<pre>";
+// print_r($key_1);
+// echo "</pre>";
+
+// echo "<pre>";
+// print_r($key_2);
+// echo "</pre>";
+
+# array_reverse()
+// https://www.php.net/manual/ja/function.array-reverse.php
+// $input  = array(
+//   "php",
+//   4.0,
+//   array("green", "red"),
+// );
+// $reversed = array_reverse($input);
+// $preserved = array_reverse($input, true);
+
+// echo "<pre>";
+// print_r($input);
+// echo "</pre>";
+
+// echo "<pre>";
+// print_r($reversed);
+// echo "</pre>";
+
+// echo "<pre>";
+// print_r($preserved);
+// echo "</pre>";
+
+# array_splice()
+// https://www.php.net/manual/ja/function.array-splice.php
+// $input = array("red", "green", "blue", "yellow");
+// array_splice($input, 2);
+// echo "<pre>";
+// print_r($input);
+// echo "</pre>";
+
+// $input = array("red", "green", "blue", "yellow");
+// array_splice($input, 1, -1);
+// echo "<pre>";
+// print_r($input);
+// echo "</pre>";
+
+// $input = array("red", "green", "blue", "yellow");
+// array_splice($input, 1, count($input), "orange");
+// echo "<pre>";
+// print_r($input);
+// echo "</pre>";
+
+// $input = array("red", "green", "blue", "yellow");
+// array_splice($input, -3, 1, array("black", "maroon"));
+// echo "<pre>";
+// print_r($input);
+// echo "</pre>";
